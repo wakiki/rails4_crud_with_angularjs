@@ -21,10 +21,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+gem 'haml'
+gem 'haml-rails'
 #Use angular js
 gem 'angularjs-rails'
 gem 'angular-ui-bootstrap-rails'
+gem 'angular-rails-templates'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -41,6 +43,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :production do
-  gem "pg"
+  # gem "pg"
   gem 'rails_12factor'
 end

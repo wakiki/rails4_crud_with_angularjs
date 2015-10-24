@@ -1,4 +1,4 @@
-var myApp = angular.module('myapplication', ['ngRoute', 'ngResource']); 
+var myApp = angular.module('myapplication', ['ngRoute', 'ngResource', 'templates']); 
 
 //Factory
 myApp.factory('Users', ['$resource',function($resource){
@@ -91,7 +91,7 @@ myApp.controller("UserAddCtr", ['$scope', '$resource', 'Users', '$location', fun
 myApp.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/users',{
-      templateUrl: '/templates/users/index.html',
+      templateUrl: 'index.html',
       controller: 'UserListCtr'
     });
     $routeProvider.when('/users/new', {
@@ -99,7 +99,7 @@ myApp.config([
       controller: 'UserAddCtr'
     });
     $routeProvider.when('/users/:id/edit', {
-      templateUrl: '/templates/users/edit.html',
+      templateUrl: 'edit.html',
       controller: "UserUpdateCtr"
     });
     $routeProvider.otherwise({
