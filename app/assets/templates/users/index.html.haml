@@ -13,12 +13,12 @@
       %tr{"ng-hide" => "users.length"}
         %td{:colspan => "5"} No users found, Please create one.
       %tr{"ng-repeat" => "user in users", "ng-show" => "users.length"}
-        %td 
-        %td 
-        %td 
-        %td 
+        %td {{user.first_name}}
+        %td {{user.last_name}}
+        %td {{user.email}}
+        %td {{user.phone}}
         %td
-          %a{:href => "#/users//edit"} Edit
+          %a{:href => "#/users/{{user.id}}/edit"} Edit
           |
           %a{:href => "", "ng-click" => "deleteUser(user.id)"} Remove
 %h2 Hi

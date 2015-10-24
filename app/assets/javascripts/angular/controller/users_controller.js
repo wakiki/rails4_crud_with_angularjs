@@ -95,11 +95,11 @@ myApp.config([
       controller: 'UserListCtr'
     });
     $routeProvider.when('/users/new', {
-      templateUrl: '/templates/users/new.html',
+      templateUrl: 'users/new.html',
       controller: 'UserAddCtr'
     });
     $routeProvider.when('/users/:id/edit', {
-      templateUrl: 'edit.html',
+      templateUrl: 'users/edit.html',
       controller: "UserUpdateCtr"
     });
     $routeProvider.otherwise({
