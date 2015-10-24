@@ -91,7 +91,7 @@ myApp.controller("UserAddCtr", ['$scope', '$resource', 'Users', '$location', fun
 myApp.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/users',{
-      templateUrl: 'index.html',
+      templateUrl: 'users/index.html',
       controller: 'UserListCtr'
     });
     $routeProvider.when('/users/new', {
